@@ -1,0 +1,4 @@
+Que es el DOM?
+DOM es la abreviatura de Document Object Model, o Modelo de Objecto de Documento. Es una estructura
+jerárquica de objetos que genera el navegador cuando se carga un documento. Este se puede alterar mediante
+JavaScript para cambiar dinámicamente los contenidos y aspectos de la página.
