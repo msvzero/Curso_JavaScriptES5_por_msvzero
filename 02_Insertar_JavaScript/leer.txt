@@ -1,0 +1,12 @@
+Ventaja de utilizar un archivo javascript externo
+- Permite separar el codigo html y javascript lo que facilita
+la lectura y el mantenimiento.
+
+Para agregar multiples archivos javascript externos utilizar multiples tags:
+    
+    <script src="myScript1.js"></script>
+    <script src="myScript2.js"></script>
+
+Para archivos javascript de paginas externas usar la url completa:
+
+<script src="https://www.w3schools.com/js/myScript1.js"></script>
