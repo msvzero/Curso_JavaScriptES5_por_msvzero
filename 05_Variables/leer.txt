@@ -1,0 +1,33 @@
+Para que sirven las variables?
+------------------------------
+Las variables son utilizadas para almacenar valores de datos.
+
+Que tipos de valores pueden almacenar las variables en javascript?
+-------------------------------------------------------------------
+Los datos pueden tener valores de los siguientes tipos:
+
+Primitivos
+-----------------
+Representan datos simples.
+
+    * boolean: true o false
+    * null : valo nulo
+    * undefined: Una variable a la que no se le ha asignado un valor tiene el valor indefinido
+    * Number: 1, 2, 3 ....
+    * String: "Juan Perez"
+
+ No Primitivos
+ --------------
+ Representan datos complejos.
+    *Objetos
+
+Objetos Primitivos
+-------------------
+A excepción de  null y undefined, todos los valores primitivos tienen objetos equivalentes que se envuelven alrededor de los valores primitivos:
+
+String para los string primitivos.
+Number para los number primitivos.
+Boolean para los Boolean primitivos.
+valueOf() devuelve un valor primitivo.
+
+-------------------------------------------------------------------------------------------------------------------------------
