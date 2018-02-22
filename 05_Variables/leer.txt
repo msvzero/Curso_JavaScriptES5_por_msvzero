@@ -70,3 +70,10 @@ Operator	Description
 >=	        mayor o igual que
 <=	        menor o igual que
 ?	        operador ternario
+
+
+Logicos
+-------
+&&	logical and
+||	logical or
+!	logical not
