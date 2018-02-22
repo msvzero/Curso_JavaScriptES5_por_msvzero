@@ -30,4 +30,43 @@ Number para los number primitivos.
 Boolean para los Boolean primitivos.
 valueOf() devuelve un valor primitivo.
 
--------------------------------------------------------------------------------------------------------------------------------
+
+Operadores  
+-----------
+Fuente: https://www.w3schools.com/js/js_assignment.asp
+
+Aritmeticos
+--------------
+Operator	Description
++	        Addition
+-	        Subtraction
+*	        Multiplication
+/	        Division
+%	        Modulus (Remainder)
+++	        Increment
+--	        Decrement
+
+
+Asignacion
+------------
+Operator	Ejemplo	    Equivalente
+=	        x = y	    x = y
++=	        x += y	    x = x + y
+-=	        x -= y	    x = x - y
+*=	        x *= y	    x = x * y
+/=	        x /= y	    x = x / y
+%=	        x %= y	    x = x % y
+
+
+Comparacion
+----------------
+Operator	Description
+==	        igual a
+===	        igual en valor y tipo
+!=	        no es igual en valor
+!==	        no es igual en valor y tipo
+>	        mayor que
+<	        menor que
+>=	        mayor o igual que
+<=	        menor o igual que
+?	        operador ternario
