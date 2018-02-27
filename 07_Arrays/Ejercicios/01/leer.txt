@@ -1,0 +1,6 @@
+Crear un array llamado "autos", cargar los siguientes valores:
+    - Kia
+    - Volvo
+    - Ferrari
+    - Suzuki
+Luego mostrar el array en pantalla.
