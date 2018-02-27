@@ -1,0 +1,4 @@
+Escribir una funcion que reciba nuestra edad y nos diga si somos:
+    - joven de 15 a 35 
+    - no tan joven 36 a 50
+    - viejo de 51 a 70

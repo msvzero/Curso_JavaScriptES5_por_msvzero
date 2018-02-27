@@ -1,0 +1,6 @@
+Una instruccion condicional se utiliza para ejecutar una accion basado en una o varias condiciones.
+La estructura basica es: 
+
+if (condicion) {
+    bloque de codigo que se ejecuta si la condicion es verdadera
+}
