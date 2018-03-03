@@ -1,0 +1,24 @@
+La instruccion switch se utiliza para seleccionar uno de los muchos bloques de código que se ejecutaran.
+
+switch(expression) {
+    case n:
+        code block
+        break;
+    case n:
+        code block
+        break;
+    default:
+        code block
+}
+
+Como funciona?
+--------------
+-La expresión switch se evalua una vez.
+-El valor de la expresión se compara con los valores de cada caso.
+-Si hay una coincidencia, se ejecuta el bloque de código asociado
+
+break
+-----
+Cuando JavaScript llega a una palabra clave break, se sale del bloque switch.
+Esto detendrá la ejecución de más código y pruebas de case dentro del bloque.
+No es necesario utilizar break en  default, ya que ahi se termina la ejecucion del bloque.
