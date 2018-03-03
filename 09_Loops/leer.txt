@@ -1,0 +1,6 @@
+Un loop puede ejecutar un bloque de codigo un numero de determinado de veces.
+Tipos de Loop
+----------------
+- for : para ejecutar un bloque de codigo N veces.
+- for/in: para recorrer las propiedade de un objeto.
+- while y do while: ejecutar un bloque de codigo siempre que se cumpla una condicion.
