@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Formularios</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="contenedor" style="margin: 10px">
+        <h1>Formularios</h1>
+        <p id="error"></p>
+        <div id="contenedorForm" style="padding:10px; width:500px">
+            <form id="miFormulario">
+                <div class="form-group ">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" class="form-control" id="nombres" name="nombres" min="4" placeholder="nombre" required="true">
+                </div>
+                <div class="form-group ">
+                        <label for="nombres">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="apellidos" required="true">
+                    </div>
+               <!--<button type="button" class="btn btn-primary" onclick="enviarDatos()">Guardar</button>-->
+               <button type="button" class="btn btn-primary" onclick="validar2()">Guardar</button>
+                
+            </form>
+        </div>
+        <div id="resultado"></div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        //Validacion manual
+        function validar(nombres, apellidos) {
+            var datosValidos = false;
+            if(nombres.length >= 4 && apellidos.length >= 4 ){
+                datosValidos = true;
+            }
+            return datosValidos;
+        }
+
+        //JavaScript Validation API
+        function validar2() {
+            var nombres = document.getElementById("nombres");
+            if (!nombres.checkValidity()) {
+                document.getElementById("error").innerHTML = "Nombres invalidos";
+            }
+        }
+
+        function enviarDatos(){
+            console.log(document.forms);//Retorna todos los formularios existentes
+            var nombres = document.forms["miFormulario"]["nombres"].value;
+            var apellidos = document.forms["miFormulario"]["apellidos"].value;apellidos
+            console.log(nombres +" "+ apellidos);
+
+            if(validar(nombres, apellidos)) {
+                alert("Se ha enviado los datos - Validacion por JavaScript");
+            } else {
+                alert("Datos incorectos - Validacion por JavaScript");
+            }
+
+        }
+       
+    </script>
+  </body>
+</html>
