@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos</title>
+        <style>
+            .button {
+                margin-top: 15px;
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p onclick="this.innerHTML = 'Evento onclick'">Click para activar el evento</p>
+            <p onmouseover="this.innerHTML = 'Evento onmouseover'">Poner el puntero del mouse encima</p>
+        </div>
+        <div>
+            <img id="imagen" src="./imagenes/embed-javascript-in-Weebly.jpg">
+        </div>
+        <button class="button" onclick="cambiarImagen()">Cambiar Imagen</button>
+        <script>
+            function cambiarImagen() {
+                document.getElementById("imagen").src = "./imagenes/Learn-Javascript.jpg";
+            }
+        </script>
+    </body>
+</html>

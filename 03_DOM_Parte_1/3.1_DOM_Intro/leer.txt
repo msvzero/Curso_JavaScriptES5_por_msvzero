@@ -1,0 +1,23 @@
+DOM
+-----
+DOM es la abreviatura de Document Object Model, o Modelo de Objecto de Documento. Es una estructura
+jerárquica de objetos que genera el navegador cuando se carga un documento. Este se puede alterar mediante
+JavaScript para cambiar dinámicamente los contenidos y aspectos de la página.
+
+
+JavaScript y el DOM
+-------------------
+Cuando se carga una pagina web, el browser o navegador crea el DOM la pagina. Con el DOM creado JavaScript
+tiene todo el poder para crear HTML dinamico.
+
+Algunas de las cosas que se pueden hacer con JavaScript:
+    - Cambiar todos los elementos de una pagina html.
+    - Cambiar todos los atributos de un elemento html de una pagina.
+    - Cambiar todos los estilos css de una pagina.
+    - Agregar y remover elementos HTML de una pagina.
+    - Reaccionar ante eventos HTML en la pagina.
+    - Crear eventos HTML en la pagina
+
+El DOM esta compuesto de:
+- Metodo (DOM methods), acciones que se pueden realizar sobre el DOM.
+- Propiedades (DOM properties), valores de los elementos HTML que podemos cambiar.

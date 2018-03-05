@@ -1,0 +1,5 @@
+HTML (Hyper Text Markup)
+- HTML es el lenguaje de marcado estándar para crear páginas web.
+- HTML describe la estructura de las páginas web.
+- Los elementos HTML están representados por etiquetas.
+- Los navegadores no muestran las etiquetas HTML, pero las usan para representar el contenido de la página.

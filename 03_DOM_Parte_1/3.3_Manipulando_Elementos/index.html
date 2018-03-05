@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buscando elementos</title>
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="tituloPagina"></div>
+            <img id= "logo" src="./imagenes/embed-javascript-in-Weebly.jpg">
+        </div>
+        <script>
+            //La forma mas simple de agregar contenido HTML es utilizando "innerHTML";
+            var titulo = document.getElementById("tituloPagina");
+            titulo.innerHTML = "<h1>Tutorial de Javascript</h2>"
+
+            //Utilizando variables
+            //var titulo = document.getElementById("tituloPagina");
+           // titulo.innerHTML = "<h1>Manipulando el DOM</h2>";
+
+            //Modificando el atributo de un elemento HTML
+            //document.getElementById("logo").src = "./imagenes/Learn-Javascript.jpg";
+
+            //Modificar el CSS de un elemento HTML
+           // titulo.style.color = "#354CC0";
+           titulo.style.fontSize = "150%" // el size se calcula teniendo en cuenta el elemento padre.
+            
+        </script>
+    </body>
+</html>

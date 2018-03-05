@@ -1,0 +1,9 @@
+JavaScript permite ejecutar codigo cuando ocurre un evento en el navegador.
+Alguno de estos eventos son:
+    - Cuando un usuario hace clic en un elemento.
+    - Cuando una pagina se carga.
+    - Cuando una imagen se carga.
+    - Cuando se mueve el mouse sobre algun elemento.
+    - Cuando el valor de input cambia.
+    - Cuando se realiza el submit de un formulario.
+
