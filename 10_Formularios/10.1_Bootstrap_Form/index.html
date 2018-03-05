@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Formularios</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="contenedor" style="margin: 10px">
+        <h1>Formularios</h1>
+        <div id="contenedorForm" style="padding:10px; width:500px">
+            <form id="miFormulario">
+                <div class="form-group">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" class="form-control" id="nombres" name="nombres" placeholder="nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="apellidos">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Pais</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="pais">
+                      <option>Argentina</option>
+                      <option>Brasil</option>
+                      <option selected >Paraguay</option>
+                      <option>Uruguay</option>
+                    </select>
+                </div>
+                <div class="form-check">
+                    <input  type="checkbox" value="true" name="checkBox" id="defaultCheck1">
+                    <label  for="defaultCheck1">
+                          Soy mayor de edad
+                    </label>
+                </div>
+                <p>Sexo</p>
+                <div class="form-check">
+                    <input  type="radio" name="sexo" id="exampleRadios1" value="hombre" checked>
+                    <label  for="exampleRadios1">
+                      Hombre
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input  type="radio" name="sexo" id="exampleRadios2" value="mujer">
+                    <label  for="exampleRadios2">
+                      Mujer
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input  type="radio" name="sexo" id="exampleRadios2" value="otro">
+                    <label  for="exampleRadios2">
+                      Otro
+                    </label>
+                </div>
+              
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Comentario</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="comentario" rows="5"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="enviarDatos()">Guardar</button>       
+            </form>
+        </div>
+        <div id="resultado"></div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function enviarDatos() {
+           // console.log("Elementos del formulario",document.getElementById("miFormulario").elements)
+            var nombres = document.getElementById("miFormulario").elements.namedItem("nombres").value;
+            var apellidos = document.getElementById("miFormulario").elements.namedItem("apellidos").value;
+            var comentario = document.getElementById("miFormulario").elements.namedItem("comentario").value;
+
+            //Verificamos el select
+            var paisIndex=document.getElementById("miFormulario").elements.namedItem("pais").selectedIndex;
+            //console.log(document.getElementById("miFormulario").elements.namedItem("pais").options)
+            //console.log(paisIndex);
+
+            var pais = document.getElementById("miFormulario").elements.namedItem("pais").options[paisIndex].value;
+
+            //Sexo
+            console.log(document.getElementById("miFormulario").elements.namedItem("sexo"));
+            var sexo = document.getElementById("miFormulario").elements.namedItem("sexo").value;
+
+
+            // Verificamos si el checkbox
+            var mayorEdad = false;
+            if(document.getElementById("miFormulario").elements.namedItem("checkBox").checked){
+                mayorEdad = document.getElementById("miFormulario").elements.namedItem("checkBox").value;
+            }
+
+            //Montamos nuestro JSON
+            var datos = {
+                nombres: nombres,
+                apellidos: apellidos,
+                pais: pais,
+                sexo: sexo,
+                mayorEdad: mayorEdad,
+                comentario: comentario
+            }
+            console.log(datos)
+            
+        }
+    </script>
+  </body>
+</html>
