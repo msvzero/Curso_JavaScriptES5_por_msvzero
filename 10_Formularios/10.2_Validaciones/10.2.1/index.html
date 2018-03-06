@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+
+    <div id="contenedor" style="padding:10px; width:500px">
+        <h1>Nueva Persona</h1>
+        <form id="formPersona">
+            <div class="form-group">
+                <label for="nombreUsuario">Nombre de Usuario</label>
+                <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electronico</label>
+                <input type="email" class="form-control" id="email" name="email" >
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="number" class="form-control" id="edad" min="18" max="25" name="edad" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button  type="button" class="btn btn-primary" onclick="validarDatos()">Guardar</button>
+            <a href="./segundaPagina.html" class="btn btn-warning">Volver</a>
+        </form>
+    </div>
+    <script>
+        function validarDatos() {
+            var formularioPersona = document.getElementById("formPersona");
+            console.log(formularioPersona.elements);
+            var nombreUsuario = formularioPersona.elements.namedItem("nombreUsuario");
+            console.log("El nombre de usuario es: ", nombreUsuario);
+
+            //Verificamos si el campo nombreUsuario cumple la validacion
+            console.log("Nombre ",nombreUsuario.checkValidity());
+
+
+            var edad = formularioPersona.elements.namedItem("edad");
+            console.log("Edad ",edad.checkValidity());
+        }
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
