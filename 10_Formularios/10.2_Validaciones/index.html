@@ -11,20 +11,22 @@
   </head>
   <body>
     <div id="contenedor" style="margin: 10px">
-        <h1>Formularios</h1>
-        <p id="error"></p>
+        <h1>Formulario</h1>
+        <!--<p id="error"></p>-->
         <div id="contenedorForm" style="padding:10px; width:500px">
             <form id="miFormulario">
-                <div class="form-group ">
+                <div id="nombres-group" class="form-group">
                     <label for="nombres">Nombres</label>
-                    <input type="text" class="form-control" id="nombres" name="nombres" min="4" placeholder="nombre" required="true">
+                    <input type="text" class="form-control" id="nombres"  name="nombres" minlength="4" maxlength="15" required>
+                    <div id="nombresError" class="form-control-feedback"></div>
                 </div>
-                <div class="form-group ">
-                        <label for="nombres">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="apellidos" required="true">
-                    </div>
+                <div id="apellidos-group" class="form-group ">
+                    <label for="nombres">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" minlength="4" maxlength="15"  required="true">
+                    <div id="apellidosError" class="form-control-feedback"></div>
+                </div>
                <!--<button type="button" class="btn btn-primary" onclick="enviarDatos()">Guardar</button>-->
-               <button type="button" class="btn btn-primary" onclick="validar2()">Guardar</button>
+               <button type="button" class="btn btn-primary" onclick="enviarDatos()">Guardar</button>
                 
             </form>
         </div>
@@ -46,24 +48,88 @@
 
         //JavaScript Validation API
         function validar2() {
+            var datosValidos = false;
+            var nombresGroup = document.getElementById("nombres-group");
             var nombres = document.getElementById("nombres");
-            if (!nombres.checkValidity()) {
-                document.getElementById("error").innerHTML = "Nombres invalidos";
+            var apellidosGroup = document.getElementById("apellidos-group");
+            var apellidos = document.getElementById("apellidos");
+
+            //Verifica si no cumple con alguna condicion
+            if (!nombres.checkValidity() || !apellidos.checkValidity()) {
+                //document.getElementById("error").innerHTML = nombres.validationMessage;
+                
+                /* ------------Verificacion del campo nombres ------------------*/
+
+                //Verificamos que el campo no este vacio
+                if(nombres.validity.valueMissing){
+                    //document.getElementById("error").innerHTML = "El campo nombre es obligatorio";
+                    nombresGroup.className = "form-group has-danger ";
+                    nombres.className = "form-control form-control-danger";
+                    document.getElementById("nombresError").innerHTML = "El campo nombres no puede estar vacio."
+                } else if(nombres.validity.tooShort) {
+                    //Valida logitud minima
+                    //document.getElementById("error").innerHTML = "Se requiere un minimo de 4 caracteres";
+                    nombresGroup.className = "form-group has-warning ";
+                    nombres.className = "form-control form-control-warning";
+                    document.getElementById("nombresError").innerHTML = "El campo nombres requiere un minimo de 4 caracteres"
+                }else {
+                    nombresGroup.className = "form-group has-success";
+                    nombres.className = "form-control form-control-success";
+                    document.getElementById("nombresError").innerHTML = ""
+                }
+
+
+                 /* ------------Verificacion del campo apellidos ------------------*/
+                
+                //Verificamos que el campo no este vacio
+                if(apellidos.validity.valueMissing){
+                    //document.getElementById("error").innerHTML = "El campo nombre es obligatorio";
+                    apellidosGroup.className = "form-group has-danger ";
+                    apellidos.className = "form-control form-control-danger";
+                    document.getElementById("apellidosError").innerHTML = "El campo apellidos no puede estar vacio."
+                }else if(apellidos.validity.tooShort){
+                     //Valida la longitud minima
+                    //document.getElementById("error").innerHTML = "Se requiere un minimo de 4 caracteres";
+                    apellidosGroup.className = "form-group has-warning ";
+                    apellidos.className = "form-control form-control-warning";
+                    document.getElementById("apellidosError").innerHTML = "El campo apellidos requiere un minimo de 4 caracteres"
+                }else {
+                    apellidosGroup.className = "form-group has-success";
+                    apellidos.className = "form-control form-control-success";
+                    document.getElementById("apellidosError").innerHTML = ""
+                }
+            }else {
+               // document.getElementById("error").innerHTML = "";
+                nombresGroup.className = "form-group has-success";
+                nombres.className = "form-control form-control-success";
+                document.getElementById("nombresError").innerHTML = ""
+                
+                apellidosGroup.className = "form-group has-success";
+                apellidos.className = "form-control form-control-success";
+                document.getElementById("apellidosError").innerHTML = ""
+                
+                datosValidos = true;
+
             }
+            return datosValidos;
         }
-
         function enviarDatos(){
-            console.log(document.forms);//Retorna todos los formularios existentes
-            var nombres = document.forms["miFormulario"]["nombres"].value;
-            var apellidos = document.forms["miFormulario"]["apellidos"].value;apellidos
-            console.log(nombres +" "+ apellidos);
+            //console.log(document.forms);//Retorna todos los formularios existentes
+            //var nombres = document.forms["miFormulario"]["nombres"].value;
+            //var apellidos = document.forms["miFormulario"]["apellidos"].value;apellidos
+            //console.log(nombres +" "+ apellidos);
 
-            if(validar(nombres, apellidos)) {
+            /*if(validar(nombres, apellidos)) {
                 alert("Se ha enviado los datos - Validacion por JavaScript");
             } else {
                 alert("Datos incorectos - Validacion por JavaScript");
+            }*/
+            var enviarDatos = validar2();
+            if(enviarDatos){
+                alert("Se ha enviado los datos - Validacion por JavaScript");
+            }else {
+                alert("Datos incorrectos - Validacion por JavaScript");
             }
-
         }
        
     </script>

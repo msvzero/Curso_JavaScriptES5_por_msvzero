@@ -1,0 +1,39 @@
+ValidityState
+----------------
+Fuentes:
+    - https://www.w3schools.com/js/js_validation_api.asp
+    - https://developer.mozilla.org/es/docs/Web/API/ValidityState
+
+    
+ValidityState.badInput Read only
+    Is a Boolean indicating the user has provided input that the browser is unable to convert.
+
+ValidityState.customError Read only
+    Is a Boolean indicating the element's custom validity message has been set to a non-empty string by calling the element's setCustomValidity() method.
+
+ValidityState.patternMismatch Read only
+    Is a Boolean indicating the value does not match the specified pattern.
+
+ValidityState.rangeOverflow Read only
+    Is a Boolean indicating the value is greater than the maximum specified by the max attribute.
+
+ValidityState.rangeUnderflow Read only
+    Is a Boolean indicating the value is less than the minimum specified by the min attribute.
+
+ValidityState.stepMismatch Read only
+    Is a Boolean indicating the value does not fit the rules determined by the step attribute (that is, it's not evenly divisible by the step value).
+
+ValidityState.tooLong Read only
+    Is a Boolean indicating the value exceeds the specified maxlength for HTMLInputElement or HTMLTextAreaElement objects. Note: This will never be true in Gecko, because elements' values are prevented from being longer than maxlength.
+
+ValidityState.tooShort Read only
+    Is a Boolean indicating the value fails to meet the specified minlength for HTMLInputElement or HTMLTextAreaElement objects.
+
+ValidityState.typeMismatch Read only
+    Is a Boolean indicating the value is not in the required syntax (when type is email or url).
+
+ValidityState.valid Read only
+    Is a Boolean indicating the element meets all constraint validations, and is therefore considered to be valid.
+
+ValidityState.valueMissing Read only
+    Is a Boolean indicating the element has a required attribute, but no value.
