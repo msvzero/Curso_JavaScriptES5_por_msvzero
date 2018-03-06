@@ -13,6 +13,7 @@
 
             </ul>
         </div>
+        <div id="demo"></div>
         <script>
             var i = 0;
             for(i;i<5;i++){
@@ -29,6 +30,17 @@
                 document.getElementById("listaAutos").appendChild(node);
             }
         </script> -->
+
+         <script>
+            var txt = "";
+            var person = {fname:"John", lname:"Doe", age:25}; 
+            var x; //atributo/indice
+            for (x in person) {
+                console.log(x);
+                txt += person[x] + " ";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        </script>
         
     </body>
 </html>
