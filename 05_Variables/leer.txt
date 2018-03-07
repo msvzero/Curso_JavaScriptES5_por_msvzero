@@ -8,17 +8,17 @@ Los datos pueden tener valores de los siguientes tipos:
 
 Primitivos
 -----------------
-Representan datos simples.
+Representan datos simples, no tienen propiedades ni metodos.
 
     * boolean: true o false
     * null : valo nulo
-    * undefined: Una variable a la que no se le ha asignado un valor tiene el valor indefinido
+    * undefined: Una variable a la que no se le ha asignado un valor tiene el valor indefinido.
     * Number: 1, 2, 3 ....
     * String: "Juan Perez"
 
  No Primitivos
  --------------
- Representan datos complejos.
+ Representan datos complejos. Continen varios valores.
     *Objetos
 
 Objetos Primitivos
