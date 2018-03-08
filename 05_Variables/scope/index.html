@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Volver despues de dar funciones */
+        //Ejemplo de variable local 
+        /*function miFuncion(){
+            var mensaje = "Hola Mundo!!" //variable global
+        }
+         console.log(mensaje)    
+        */
+        
+        //Ejemplo de variable global
+       /* var nombre = "Juan Perez";//variable global
+        function miFuncion2(){
+            console.log(nombre);
+        }
+        miFuncion2();*/
+
+        //Ejemplo de variable global dentro de una funcion
+        function miFuncion3(){
+            var nombre= "Juan"; //variable local
+            apellido = "Perez"; //variable global
+        }
+        miFuncion3();
+        //console.log(nombre);
+        console.log(apellido);
+
+    </script>
+</body>
+</html>
