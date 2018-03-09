@@ -1,0 +1,7 @@
+Buscando elementos en HTML
+----------------------------
+
+- Buscar elemento por su id.
+- Buscar elementos por su clase.
+- Buscar elementos por su tag
+- Buscar elementos por el selector CSS.
