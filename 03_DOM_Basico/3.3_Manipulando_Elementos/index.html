@@ -5,7 +5,8 @@
     </head>
     <body>
         <div id="contenedor">
-            <div id="tituloPagina"></div>
+            <h1 id="tituloPagina"></h1>
+            <div id="informacion"></div>
             <img id= "logo" src="./imagenes/embed-javascript-in-Weebly.jpg">
         </div>
         <script>
@@ -22,8 +23,24 @@
 
             //Modificar el CSS de un elemento HTML
             titulo.style.backgroundColor = "#000"
-           titulo.style.color = "#354CC0";
-           titulo.style.fontSize = "150%" // el size se calcula teniendo en cuenta el elemento padre.
+            titulo.style.color = "#354CC0";
+            titulo.style.fontSize = "150%" // el size se calcula teniendo en cuenta el elemento padre.
+
+
+            //Agregando nuevos elementos
+            var contenedor = document.getElementById("contenedor");
+            var informacion = contenedor.children[1];
+            var parrafo = document.createElement("P");
+            var texto = document.createTextNode("El servidor esta con problemas");
+            parrafo.appendChild(texto);
+            informacion.appendChild(parrafo.appendChild(texto));
+                
+
+            //Agregando un nuevo div
+            var miNuevoDiv = document.createElement("DIV");
+            contenedor.appendChild(miNuevoDiv);
+
+
             
         </script>
     </body>

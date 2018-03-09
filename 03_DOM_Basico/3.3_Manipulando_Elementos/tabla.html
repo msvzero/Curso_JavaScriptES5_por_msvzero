@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+                
+            td, th {
+                 border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+                
+        </style>
+</head>
+<body>
+        <!-- Definimos la tabla-->
+        <table id="personas">           
+                <tr> <!-- tr define una fila-->     
+                  <th>Company</th> <!-- th define el header de la  tabla-->  
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td><!-- td define una celda en la fila-->
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+              
+              </table>
+              <script>
+                var tabla = document.getElementById("personas");
+                console.log(tabla.rows.length)
+                var row = tabla.insertRow(tabla.rows.length);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                cell1.innerHTML = "NEW CELL1l";
+                cell2.innerHTML = "NEW CELL2";
+                cell3.innerHTML = "NEW CELL2";
+
+
+                //tabla.deleteRow(1);
+              
+              </script>
+</body>
+</html>
