@@ -1,2 +1,2 @@
 # Curso_JavaScript_by_msvzero
-Curso de JavaScript Basico para el BootcampGDG 1
+Curso de JavaScript ES5 basico para el BootcampGDG 1
